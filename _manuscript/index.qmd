@@ -1,0 +1,114 @@
+---
+title: "My Name Is Ben Panackal If I Were a Package I'd Be the Tidyverse"
+author: "Benjamin Panackal"
+date: 9/8/2026
+keywords: [quarto, reproducibility, personal introduction]
+status: "Draft"
+abstract: |
+  An introduction to my personal and professional life
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+  docx:
+    toc: true
+    number-sections: true
+format-links:
+  - html
+  - format: pdf
+    text: Download PDF
+    icon: file-pdf
+  - format: docx
+    text: Download Word
+    icon: file-word
+bibliography: references.bib
+---
+# Introduction 
+## Hello it is very nice to meet all of you; I look forward to learning and working with all of you!
+## **Here is Some General Information About Me**
+* __Name: Benjamin Panackal__
+* __Grade: Sophomore__
+* __Majors: Computer Science and Data Science__
+* __Motivation for taking class:__
+    * I have an interest in Data Science and Machine Learning 
+    * I want to contribute to research during my undergrad here at UW Madison.
+    * I thought this class would be a good way to pursue my passion and chase my goals
+    * I hope to come out of this course knowing how to research and gain basic data science competency
+
+
+
+
+
+
+
+# More About Me
+## My Hobbies
+* __Physical Activity__
+    * Playing Volleyball
+
+  ::: {.callout-note}
+  * I started playing in 6th grade
+  :::
+
+    * Climbing
+
+  ::: {.callout-note}
+  * I started about two years ago
+  :::
+
+    * Weightlifting
+
+  ::: {.callout-note}
+  * I started about five years ago
+  :::
+* __Everything Else__
+    * Building CS Projects
+
+  ::: {.callout-note}
+  * I started about a year ago
+  :::
+    * Playing Guitar
+
+  ::: {.callout-note}
+  * I started about a two years ago
+  :::
+
+    * Hanging Out With Friends
+    * Cooking
+    * Gaming
+        * My preferred game of choice is League of Legends
+
+  ::: {.callout-important}
+  * I hit masters this summer and swore to stop playing
+  :::
+            
+
+## My Background
+
+### Where I'm from: 
+Burlington, Wisconsin
+
+### Where's my family from:
+Kerala, India
+
+# My Professional Career
+## Classes 
+### My highest completed stats course at UW Madison is STAT240
+### My highest completed computer science course at UW Madison is CS400
+
+## My Links
+### _[My Github](https://github.com/BenJPanackal?tab=repositories)_
+### _[My LinkedIn](https://www.linkedin.com/in/benjamin-panackal-99aa95386/)_
+
+# What Python Library Describes Me?
+## Pandas
+```{python}
+import pandas as pd
+print("Hello World")
+````
+
+First, introduce yourself: tell your reader who you are, what draws you to this course, and what you hope to get out of it. 
+^[By: Ben Panackal]
