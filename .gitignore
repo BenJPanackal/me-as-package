@@ -2,6 +2,7 @@
 /.quarto/
 /_site/
 /_freeze/
+/_manuscript/
 *.quarto_ipynb
 .quartoignore
 
