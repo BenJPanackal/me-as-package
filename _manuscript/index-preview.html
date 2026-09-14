@@ -9,7 +9,7 @@
     <meta name="dcterms.date" content="2026-09-08">
     <meta name="keywords" content="quarto, reproducibility, personal introduction">
 
-    <title>My Name Is Ben Panackal If I Were a Package I’d Be the Tidyverse</title>
+    <title>My Name Is Ben Panackal If I Were a Package I’d Be pandas</title>
     <style>
       /* Default styles provided by pandoc.
       ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,7 +28,61 @@
         margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
         vertical-align: middle;
       }
-    </style>
+      /* CSS for syntax highlighting */
+      html { -webkit-text-size-adjust: 100%; }
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+      /* CSS for citations */
+      div.csl-bib-body { }
+      div.csl-entry {
+        clear: both;
+      }
+      .hanging-indent div.csl-entry {
+        margin-left:2em;
+        text-indent:-2em;
+      }
+      div.csl-left-margin {
+        min-width:2em;
+        float:left;
+      }
+      div.csl-right-inline {
+        margin-left:2em;
+        padding-left:1em;
+      }
+      div.csl-indent {
+        margin-left: 2em;
+      }    </style>
 
     <style>
       body.hypothesis-enabled #quarto-embed-header {
@@ -132,13 +186,16 @@
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-62e2d20df198e8a01bb734742f2e28cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
 </script>  
-      <meta name="citation_title" content="My Name Is Ben Panackal If I Were a Package I&amp;amp;#039;d Be the Tidyverse">
+      <meta name="citation_title" content="My Name Is Ben Panackal If I Were a Package I&amp;amp;#039;d Be `pandas`">
 <meta name="citation_abstract" content="An introduction to my personal and professional life
 ">
 <meta name="citation_keywords" content="quarto,reproducibility,personal introduction">
@@ -149,6 +206,8 @@
 <meta name="citation_online_date" content="2026-09-08">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
+<meta name="citation_reference" content="citation_title=Data structures for statistical computing in python;,citation_author=Wes McKinney;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;,citation_fulltext_html_url=https://pandas.pydata.org/;,citation_journal_title=Proceedings of the Python in Science Conference;">
+<meta name="citation_reference" content="citation_title=Seaborn: Statistical data visualization;,citation_author=Michael L. Waskom;,citation_author=others;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://seaborn.pydata.org/;">
 </head>
 
   <body class="quarto-notebook quarto-light">
@@ -163,7 +222,7 @@
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">My Name Is Ben Panackal If I Were a Package I’d Be the Tidyverse</h1>
+      <h1 class="title">My Name Is Ben Panackal If I Were a Package I’d Be <code>pandas</code></h1>
           </div>
 
     
@@ -211,49 +270,14 @@
     </div>  </div>
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
-  <ul class="collapse">
-  <li><a href="#hello-it-is-very-nice-to-meet-all-of-you-i-look-forward-to-learning-and-working-with-all-of-you" id="toc-hello-it-is-very-nice-to-meet-all-of-you-i-look-forward-to-learning-and-working-with-all-of-you" class="nav-link" data-scroll-target="#hello-it-is-very-nice-to-meet-all-of-you-i-look-forward-to-learning-and-working-with-all-of-you"><span class="header-section-number">1.1</span> Hello it is very nice to meet all of you; I look forward to learning and working with all of you!</a></li>
-  <li><a href="#here-is-some-general-information-about-me" id="toc-here-is-some-general-information-about-me" class="nav-link" data-scroll-target="#here-is-some-general-information-about-me"><span class="header-section-number">1.2</span> <strong>Here is Some General Information About Me</strong></a></li>
-  </ul></li>
-  <li><a href="#more-about-me" id="toc-more-about-me" class="nav-link" data-scroll-target="#more-about-me"><span class="header-section-number">2</span> More About Me</a>
-  <ul class="collapse">
-  <li><a href="#my-hobbies" id="toc-my-hobbies" class="nav-link" data-scroll-target="#my-hobbies"><span class="header-section-number">2.1</span> My Hobbies</a></li>
-  <li><a href="#my-background" id="toc-my-background" class="nav-link" data-scroll-target="#my-background"><span class="header-section-number">2.2</span> My Background</a>
-  <ul class="collapse">
-  <li><a href="#where-im-from" id="toc-where-im-from" class="nav-link" data-scroll-target="#where-im-from"><span class="header-section-number">2.2.1</span> Where I’m from:</a></li>
-  <li><a href="#wheres-my-family-from" id="toc-wheres-my-family-from" class="nav-link" data-scroll-target="#wheres-my-family-from"><span class="header-section-number">2.2.2</span> Where’s my family from:</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#my-professional-career" id="toc-my-professional-career" class="nav-link" data-scroll-target="#my-professional-career"><span class="header-section-number">3</span> My Professional Career</a>
-  <ul class="collapse">
-  <li><a href="#classes" id="toc-classes" class="nav-link" data-scroll-target="#classes"><span class="header-section-number">3.1</span> Classes</a>
-  <ul class="collapse">
-  <li><a href="#my-highest-completed-stats-course-at-uw-madison-is-stat240" id="toc-my-highest-completed-stats-course-at-uw-madison-is-stat240" class="nav-link" data-scroll-target="#my-highest-completed-stats-course-at-uw-madison-is-stat240"><span class="header-section-number">3.1.1</span> My highest completed stats course at UW Madison is STAT240</a></li>
-  <li><a href="#my-highest-completed-computer-science-course-at-uw-madison-is-cs400" id="toc-my-highest-completed-computer-science-course-at-uw-madison-is-cs400" class="nav-link" data-scroll-target="#my-highest-completed-computer-science-course-at-uw-madison-is-cs400"><span class="header-section-number">3.1.2</span> My highest completed computer science course at UW Madison is CS400</a></li>
-  </ul></li>
-  <li><a href="#my-links" id="toc-my-links" class="nav-link" data-scroll-target="#my-links"><span class="header-section-number">3.2</span> My Links</a>
-  <ul class="collapse">
-  <li><a href="#my-github" id="toc-my-github" class="nav-link" data-scroll-target="#my-github"><span class="header-section-number">3.2.1</span> <em>My Github</em></a></li>
-  <li><a href="#my-linkedin" id="toc-my-linkedin" class="nav-link" data-scroll-target="#my-linkedin"><span class="header-section-number">3.2.2</span> <em>My LinkedIn</em></a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#what-python-library-describes-me" id="toc-what-python-library-describes-me" class="nav-link" data-scroll-target="#what-python-library-describes-me"><span class="header-section-number">4</span> What Python Library Describes Me?</a>
-  <ul class="collapse">
-  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas"><span class="header-section-number">4.1</span> Pandas</a></li>
-  </ul></li>
-  </ul>
-</nav>
+  
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <section id="introduction" class="level1" data-number="1">
+     <div id="d635d4b2" class="cell markdown">
+<section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <section id="hello-it-is-very-nice-to-meet-all-of-you-i-look-forward-to-learning-and-working-with-all-of-you" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="hello-it-is-very-nice-to-meet-all-of-you-i-look-forward-to-learning-and-working-with-all-of-you"><span class="header-section-number">1.1</span> Hello it is very nice to meet all of you; I look forward to learning and working with all of you!</h2>
@@ -269,7 +293,7 @@
 <li>I have an interest in Data Science and Machine Learning</li>
 <li>I want to contribute to research during my undergrad here at UW Madison.</li>
 <li>I thought this class would be a good way to pursue my passion and chase my goals</li>
-<li>I hope to come out of this course knowing how to research and gain basic data science competency</li>
+<li>I hope to come out of this course knowing how to research and get good at data science</li>
 </ul></li>
 </ul>
 </section>
@@ -433,10 +457,101 @@ Important
 <h1 data-number="4"><span class="header-section-number">4</span> What Python Library Describes Me?</h1>
 <section id="pandas" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="pandas"><span class="header-section-number">4.1</span> Pandas</h2>
-<p>import pandas as pd print(“Hello World”) ````</p>
-<p>First, introduce yourself: tell your reader who you are, what draws you to this course, and what you hope to get out of it. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>I identify with the <code>pandas</code> library <span class="citation" data-cites="mckinney2010">(<a href="#ref-mckinney2010" role="doc-biblioref">McKinney 2010</a>)</span> because, like pandas, I strive to organize and clarify data. <code>Pandas</code> provides tools for manipulating structured data, and I believe in bringing structure and clarity to complex problems as well as tidyness.</p>
 </section>
 </section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-cleaned-data" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cleaned-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Student data before and after cleaning with pandas
+</figcaption>
+<div aria-describedby="tbl-cleaned-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create messy raw data with missing values and inconsistencies</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Student'</span>: [<span class="st">'Alice'</span>, <span class="st">'Bob'</span>, <span class="va">None</span>, <span class="st">'Diana'</span>, <span class="st">'Eve'</span>],</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Math_Score'</span>: [<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="va">None</span>, <span class="dv">92</span>],</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Science_Score'</span>: [<span class="dv">78</span>, <span class="dv">82</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">91</span>],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GPA'</span>: [<span class="fl">3.5</span>, <span class="fl">3.8</span>, <span class="fl">3.6</span>, <span class="fl">3.7</span>, <span class="fl">3.9</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df_raw <span class="op">=</span> pd.DataFrame(raw_data)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Raw Data (with issues):"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_raw)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Missing value counts:</span><span class="ch">\n</span><span class="sc">{</span>df_raw<span class="sc">.</span>isnull()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean the data using pandas</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> df_raw.dropna()  <span class="co"># Remove rows with missing values</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> df_clean.reset_index(drop<span class="op">=</span><span class="va">True</span>)  <span class="co"># Reset index</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>df_clean[<span class="st">'Average_Score'</span>] <span class="op">=</span> (df_clean[<span class="st">'Math_Score'</span>] <span class="op">+</span> df_clean[<span class="st">'Science_Score'</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n\n</span><span class="st">Cleaned Data:"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_clean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Raw Data (with issues):
+  Student  Math_Score  Science_Score  GPA
+0   Alice        85.0             78  3.5
+1     Bob        90.0             82  3.8
+2     NaN        88.0             85  3.6
+3   Diana         NaN             88  3.7
+4     Eve        92.0             91  3.9
+
+Missing value counts:
+Student          1
+Math_Score       1
+Science_Score    0
+GPA              0
+dtype: int64
+
+
+Cleaned Data:
+  Student  Math_Score  Science_Score  GPA  Average_Score
+0   Alice        85.0             78  3.5           81.5
+1     Bob        90.0             82  3.8           86.0
+2     Eve        92.0             91  3.9           91.5</code></pre>
+</div>
+</div>
+</figure>
+</div></div>
+<div id="18eff0e5" class="cell markdown">
+<p>As shown in <a href="#tbl-cleaned-data" class="quarto-xref">Table&nbsp;1</a>, <code>pandas</code> easily handles data cleaning by removing incomplete records and adding calculated columns. This demonstrates how I approach problems: identifying issues, removing insignificant details, and deriving meaningful insights.</p>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-student-performance" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a visualization showing the relationship between scores and GPA</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>df_clean, x<span class="op">=</span><span class="st">'Average_Score'</span>, y<span class="op">=</span><span class="st">'GPA'</span>, s<span class="op">=</span><span class="dv">150</span>, color<span class="op">=</span><span class="st">'steelblue'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Average Test Score'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'GPA'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Student Performance: Test Scores vs GPA'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-student-performance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-student-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="index_files/figure-html/fig-student-performance-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Relationship between GPA and average test scores"><img src="index_files/figure-html/fig-student-performance-output-1.png" width="761" height="566" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-student-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Relationship between GPA and average test scores
+</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="6a17231d" class="cell markdown">
+<p>The visualization in <a href="#fig-student-performance" class="quarto-xref">Figure&nbsp;1</a> shows the strong correlation between academic performance metrics, illustrating how organized data reveals patterns that raw, messy data obscures.</p>
+<p><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-mckinney2010" class="csl-entry" role="listitem">
+McKinney, Wes. 2010. <span>“Data Structures for Statistical Computing in Python.”</span> <em>Proceedings of the Python in Science Conference</em>, 56–61. <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>.
+</div>
+</div>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
@@ -843,6 +958,37 @@ Important
       }
     }
   });
-  </script>  </div> <!-- /content --> 
+  </script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script> 
   
 </body></html>

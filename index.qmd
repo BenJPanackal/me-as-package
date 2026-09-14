@@ -1,5 +1,5 @@
 ---
-title: "My Name Is Ben Panackal If I Were a Package I'd Be the Tidyverse"
+title: "My Name Is Ben Panackal If I Were a Package I'd Be `pandas`"
 author: "Benjamin Panackal"
 date: 9/8/2026
 keywords: [quarto, reproducibility, personal introduction]
@@ -36,7 +36,7 @@ bibliography: references.bib
     * I have an interest in Data Science and Machine Learning 
     * I want to contribute to research during my undergrad here at UW Madison.
     * I thought this class would be a good way to pursue my passion and chase my goals
-    * I hope to come out of this course knowing how to research and gain basic data science competency
+    * I hope to come out of this course knowing how to research and get good at data science
 
 
 
@@ -105,10 +105,60 @@ Kerala, India
 
 # What Python Library Describes Me?
 ## Pandas
-```{python}
-import pandas as pd
-print("Hello World")
-````
+I identify with the `pandas` library [@mckinney2010] because, like pandas, I strive to organize and clarify data. 
+`Pandas` provides tools for manipulating structured data, and I believe in bringing structure and clarity to complex problems
+as well as tidyness. 
 
-First, introduce yourself: tell your reader who you are, what draws you to this course, and what you hope to get out of it. 
+```{python}
+#| label: tbl-cleaned-data
+#| tbl-cap: "Student data before and after cleaning with pandas"
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Create messy raw data with missing values and inconsistencies
+raw_data = {
+    'Student': ['Alice', 'Bob', None, 'Diana', 'Eve'],
+    'Math_Score': [85, 90, 88, None, 92],
+    'Science_Score': [78, 82, 85, 88, 91],
+    'GPA': [3.5, 3.8, 3.6, 3.7, 3.9]
+}
+
+df_raw = pd.DataFrame(raw_data)
+print("Raw Data (with issues):")
+print(df_raw)
+print(f"\nMissing value counts:\n{df_raw.isnull().sum()}")
+
+# Clean the data using pandas
+df_clean = df_raw.dropna()  # Remove rows with missing values
+df_clean = df_clean.reset_index(drop=True)  # Reset index
+df_clean['Average_Score'] = (df_clean['Math_Score'] + df_clean['Science_Score']) / 2
+
+print("\n\nCleaned Data:")
+print(df_clean)
+```
+
+As shown in @tbl-cleaned-data, `pandas` easily handles data cleaning by removing incomplete records and adding calculated columns. 
+This demonstrates how I approach problems: identifying issues, removing insignificant details, and deriving meaningful insights.
+
+```{python}
+#| label: fig-student-performance
+#| fig-cap: "Relationship between GPA and average test scores"
+
+# Create a visualization showing the relationship between scores and GPA
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df_clean, x='Average_Score', y='GPA', s=150, color='steelblue', alpha=0.7)
+plt.xlabel('Average Test Score')
+plt.ylabel('GPA')
+plt.title('Student Performance: Test Scores vs GPA')
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+```
+
+The visualization in @fig-student-performance shows the strong correlation between academic performance metrics, illustrating how organized data reveals patterns that raw, messy data obscures.
+
+
 ^[By: Ben Panackal]
+

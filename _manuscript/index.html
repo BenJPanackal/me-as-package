@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2026-09-08">
 <meta name="keywords" content="quarto, reproducibility, personal introduction">
 
-<title>My Name Is Ben Panackal If I Were a Package I’d Be the Tidyverse</title>
+<title>My Name Is Ben Panackal If I Were a Package I’d Be pandas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,7 +29,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -43,6 +62,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-62e2d20df198e8a01bb734742f2e28cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -51,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 
-<meta name="citation_title" content="My Name Is Ben Panackal If I Were a Package I&amp;amp;#039;d Be the Tidyverse">
+<meta name="citation_title" content="My Name Is Ben Panackal If I Were a Package I&amp;amp;#039;d Be `pandas`">
 <meta name="citation_abstract" content="An introduction to my personal and professional life
 ">
 <meta name="citation_keywords" content="quarto,reproducibility,personal introduction">
@@ -62,6 +84,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="citation_online_date" content="2026-09-08">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
+<meta name="citation_reference" content="citation_title=Data structures for statistical computing in python;,citation_author=Wes McKinney;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;,citation_fulltext_html_url=https://pandas.pydata.org/;,citation_journal_title=Proceedings of the Python in Science Conference;">
+<meta name="citation_reference" content="citation_title=Seaborn: Statistical data visualization;,citation_author=Michael L. Waskom;,citation_author=others;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://seaborn.pydata.org/;">
 </head>
 
 <body class="quarto-light">
@@ -69,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">My Name Is Ben Panackal If I Were a Package I’d Be the Tidyverse</h1>
+      <h1 class="title">My Name Is Ben Panackal If I Were a Package I’d Be <code>pandas</code></h1>
           </div>
 
     
@@ -153,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas"><span class="header-section-number">4.1</span> Pandas</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="index-preview.html"><i class="bi bi-journal-code"></i>Article Notebook</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -180,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 <li>I have an interest in Data Science and Machine Learning</li>
 <li>I want to contribute to research during my undergrad here at UW Madison.</li>
 <li>I thought this class would be a good way to pursue my passion and chase my goals</li>
-<li>I hope to come out of this course knowing how to research and gain basic data science competency</li>
+<li>I hope to come out of this course knowing how to research and get good at data science</li>
 </ul></li>
 </ul>
 </section>
@@ -344,13 +368,66 @@ Important
 <h1 data-number="4"><span class="header-section-number">4</span> What Python Library Describes Me?</h1>
 <section id="pandas" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="pandas"><span class="header-section-number">4.1</span> Pandas</h2>
-<p>import pandas as pd print(“Hello World”) ````</p>
-<p>First, introduce yourself: tell your reader who you are, what draws you to this course, and what you hope to get out of it. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>I identify with the <code>pandas</code> library <span class="citation" data-cites="mckinney2010">(<a href="#ref-mckinney2010" role="doc-biblioref">McKinney 2010</a>)</span> because, like pandas, I strive to organize and clarify data. <code>Pandas</code> provides tools for manipulating structured data, and I believe in bringing structure and clarity to complex problems as well as tidyness.</p>
+<div id="tbl-cleaned-data" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cleaned-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Student data before and after cleaning with pandas
+</figcaption>
+<div aria-describedby="tbl-cleaned-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code>Raw Data (with issues):
+  Student  Math_Score  Science_Score  GPA
+0   Alice        85.0             78  3.5
+1     Bob        90.0             82  3.8
+2     NaN        88.0             85  3.6
+3   Diana         NaN             88  3.7
+4     Eve        92.0             91  3.9
+
+Missing value counts:
+Student          1
+Math_Score       1
+Science_Score    0
+GPA              0
+dtype: int64
+
+
+Cleaned Data:
+  Student  Math_Score  Science_Score  GPA  Average_Score
+0   Alice        85.0             78  3.5           81.5
+1     Bob        90.0             82  3.8           86.0
+2     Eve        92.0             91  3.9           91.5</code></pre>
+</div>
+</div>
+</figure>
+<a class="quarto-notebook-link" id="nblink-1" href="index-preview.html#tbl-cleaned-data">Source: Article Notebook</a></div>
+<p>As shown in <a href="#tbl-cleaned-data" class="quarto-xref">Table&nbsp;1</a>, <code>pandas</code> easily handles data cleaning by removing incomplete records and adding calculated columns. This demonstrates how I approach problems: identifying issues, removing insignificant details, and deriving meaningful insights.</p>
+<div id="cell-fig-student-performance" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-student-performance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-student-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-student-performance-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Relationship between GPA and average test scores"><img src="index_files/figure-html/fig-student-performance-output-1.png" width="761" height="566" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-student-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Relationship between GPA and average test scores
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The visualization in <a href="#fig-student-performance" class="quarto-xref">Figure&nbsp;1</a> shows the strong correlation between academic performance metrics, illustrating how organized data reveals patterns that raw, messy data obscures.</p>
+<p><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-mckinney2010" class="csl-entry" role="listitem">
+McKinney, Wes. 2010. <span>“Data Structures for Statistical Computing in Python.”</span> <em>Proceedings of the Python in Science Conference</em>, 56–61. <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>By: Ben Panackal<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -758,6 +835,38 @@ Important
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
