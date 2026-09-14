@@ -3,6 +3,7 @@
 /_site/
 /_freeze/
 /_manuscript/
+/site_libs/
 *.quarto_ipynb
 .quartoignore
 
